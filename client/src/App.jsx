@@ -21,7 +21,6 @@ function App() {
 
   const changeLang = (value) => {
     setLang(value)
-    console.log(value)
   }
 
   const runCode = () => {
@@ -62,7 +61,7 @@ function App() {
   }
 
   const processOutput = (output) => {
-    return output?.split("\n").map(function(item, idx) {
+    return String(output)?.split("\n").map(function(item, idx) {
       return (
         <span key={idx}>
             {item}
